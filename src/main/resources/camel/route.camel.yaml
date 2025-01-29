@@ -9,4 +9,4 @@
       steps:
         - log:
             id: log-2135
-            message: Hello World
+            message: Hello World.
