@@ -1,0 +1,25 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: "my-quarkus-app"
+  description: "A cool quarkus app"
+  tags:
+    - java
+  links:
+    - url: https://devspaces.apps.cluster-j6qg8.j6qg8.sandbox3018.opentlc.com/?storageType=per-workspace#https://github.com/luisevm-do400-org/my-quarkus-app
+      title: OpenShift Dev Spaces
+      icon: web
+    - url: https://hawtio-online.apps.cluster-j6qg8.j6qg8.sandbox3018.opentlc.com/
+      title: HawtIO
+      icon: web
+  annotations:
+    backstage.io/kubernetes-id: "my-quarkus-app"
+    janus-idp.io/tekton : "my-quarkus-app"    
+    backstage.io/source-location: 'url:https://github.com/luisevm-do400-org/my-quarkus-app'
+    backstage.io/techdocs-ref: 'url:https://github.com/luisevm-do400-org/my-quarkus-app'
+    argocd/app-selector: backstage-name=my-quarkus-app
+    backstage.io/kubernetes-label-selector: 'app.kubernetes.io/instance=my-quarkus-app'
+spec:
+  type: service
+  lifecycle: experimental
+  owner: 'user:user1'
